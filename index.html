@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>店铺合伙人</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/laytpl.js"></script>
+</head>
+
+
+<style>
+    .swiper-container {
+        height: 35%;
+        margin-top: 0;
+    }
+    .swiper-container .swiper-slide {
+        font-size: 12px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-pagination-bullet-active{
+        background:#e62129;
+    }
+</style>
+
+<body style="background-color: #1E9FFF">
+
+<!--合伙协议  费用说明-->
+<div id="xyContent" class="xyContent">
+    <div>
+        <p>合伙协议</p>
+        <span>
+            我们每个商品都是设置了不同的佣金比例，并采
+            用的国家法律允许的三级分销制，当你转发给A
+            A消费了你就可以获得一级佣金:当A转发给B
+            B消费了，你就可以获得二级佣金;当B转发给C
+            C消费了，你就可以获得三级佣金。举个例子:
+
+            比如某 个商品销售价为50元，-级佣 金比例8%:
+            二级佣金比例5%;三级佣金比例3%;
+            假设经你的转发，其中有10个好友购买消费，那
+            么你将获得一级分销佣金:
+            50元X 10人X8% = 40元
+            假设你10好友也跟你一样成为合伙人并转发。同
+            样，经他们的转发，其中每人也都有10个人购买
+            消费，那么总共就是100人购买消费了，你将获
+            得二级分销佣金是:
+            50元X 100人X5%= 250元
+            假设这100人也都跟你一样，经他们的转发，平
+            均每人也有10个人购买消费，那么就是1000人
+            购买消费，你将获得三级分销收入是:
+            50元X 1000人X3%= 1500元
+            那么，你的总收入就是
+            40元+ 250元+ 1500元= 1790元
+
+            仔细看一看，经你的转发才10个人购买消费，最
+            后你确获得了1790元的收入，是不是有点不可思
+            议?
+            其实，这就是倍增裂变的魅力! 1变2; 2变4、4变
+            8，8变16, 16变.....
+            仔细想想:我们每个人的微信里才10个好友
+            吗?我们每个人的微信才只有10个群吗?
+            如果把这
+            这些好友，这些群都能转化
+            比成我们的资源，
+            那将能为我们带来多大的财富啊!
+        </span>
+        <p class="qdBtn" onclick="hideMask()">确定</p>
+    </div>
+</div>
+<div id="fyContent" class="xyContent">
+    <div>
+        <p>费用说明</p>
+        <span>
+            我们每个商品都是设置了不同的佣金比例，并采
+            用的国家法律允许的三级分销制，当你转发给A
+            A消费了你就可以获得一级佣金:当A转发给B
+            B消费了，你就可以获得二级佣金;当B转发给C
+            C消费了，你就可以获得三级佣金。举个例子:
+
+            比如某 个商品销售价为50元，-级佣 金比例8%:
+            二级佣金比例5%;三级佣金比例3%;
+            假设经你的转发，其中有10个好友购买消费，那
+            么你将获得一级分销佣金:
+            50元X 10人X8% = 40元
+            假设你10好友也跟你一样成为合伙人并转发。同
+            样，经他们的转发，其中每人也都有10个人购买
+            消费，那么总共就是100人购买消费了，你将获
+            得二级分销佣金是:
+            50元X 100人X5%= 250元
+            假设这100人也都跟你一样，经他们的转发，平
+            均每人也有10个人购买消费，那么就是1000人
+            购买消费，你将获得三级分销收入是:
+            50元X 1000人X3%= 1500元
+            那么，你的总收入就是
+            40元+ 250元+ 1500元= 1790元
+
+            仔细看一看，经你的转发才10个人购买消费，最
+            后你确获得了1790元的收入，是不是有点不可思
+            议?
+            其实，这就是倍增裂变的魅力! 1变2; 2变4、4变
+            8，8变16, 16变.....
+            仔细想想:我们每个人的微信里才10个好友
+            吗?我们每个人的微信才只有10个群吗?
+            如果把这
+            这些好友，这些群都能转化
+            比成我们的资源，
+            那将能为我们带来多大的财富啊!
+        </span>
+        <p class="qdBtn" onclick="hideMask()">确定</p>
+    </div>
+</div>
+
+<!--导航标题-->
+<div class="titles">
+    <img src="image/back.png" class="leftIcon" onclick="window.history.go(-1)">
+    <div>
+        <p>店铺合伙人</p>
+    </div>
+</div>
+
+<!--头部图片或视频-->
+<div class="contentTopPic">
+    <img src="image/top.png">
+</div>
+
+<!--底部内容-->
+<div class="partnerContent">
+    <div class="pContent">
+         <!--内容头部-->
+        <div class="titleContent">
+            <div>
+                <p class="over1">春之味购物商场</p>
+                <p>招募店铺合伙人啦</p>
+            </div>
+            <img src="image/1.png">
+            <img src="image/2.png" class="titleContentImg2">
+        </div>
+        <div class="titleContentBottom">
+            <span class="over3">您每天都在玩着微信，<br>有没有想过可以边玩边赚钱呢?<br>---答案是可以有的。</span>
+        </div>
+
+        <!--我们是谁-->
+        <div class="title1">
+            <hr class="hrLeft">
+            <p>我们是谁</p>
+            <hr class="hrRight">
+        </div>
+        <div class="title1Content">
+            <div class="over3">这里读取的是店铺设置的简介。这里读取的是店铺设置的简介。这里读取的是店铺设置的简介。铺设置的简介。这里读取的是店铺设置的简介。</div>
+        </div>
+
+        <!--我们的特色-->
+        <div class="title2">
+            <hr class="hrLeft">
+            <p>我们的特色</p>
+            <hr class="hrRight">
+        </div>
+        <div class="title2Content">
+            <p>读取店铺特色肉炒银条、牛肉火锅、牛肉面、手工牛肉丸</p>
+        </div>
+        <script id="indexContent" type="text/html">
+            {{# for(var i = 0; i < d.content.length; i++){ }}
+            <div class="swiper-slide">
+                {{# for(var j = 0; j < d.content[i].length; j++){ }}
+                <div class="carContent layui-col-xs6">
+                    <div>
+                        <img src="image/img1.png">
+                        <p class="over1">{{ d.content[i][j].titles }}</p>
+                        <p class="over1">￥{{ d.content[i][j].cost }}/份</p>
+                    </div>
+                </div>
+                {{# } }}
+            </div>
+            {{# } }}
+        </script>
+        <div class="swiper-container" style="margin-top: 2%">
+            <div class="swiper-wrapper" id="indexTextContent"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="adressContents">
+            <div class="over1">店铺地址:揭阳市榕城区进贤大道14号 <img src="image/3.png"></div>
+            <div class="over1">联系电话: 0663-8816236<img src="image/4.png"></div>
+            <div class="over1">营业时间: 9:C0-13:00 15:00- 22:00</div>
+            <div class="adress">公交指引: </div>
+            <p class="over2">市内可坐5路、梅云可坐3路到进贤市场下车，往前走50米即到</p>
+        </div>
+
+        <!--我们店内环境-->
+        <div class="title2">
+            <hr class="hrLeft">
+            <p>我们店内环境</p>
+            <hr class="hrRight">
+        </div>
+        <div class="swiper-container1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hjSwiper">
+                    <div>1</div>
+                </div>
+                <div class="swiper-slide hjSwiper">
+                    <div>2</div>
+                </div>
+                <div class="swiper-slide hjSwiper">
+                    <div>3</div>
+                </div>
+                <div class="swiper-slide hjSwiper">
+                    <div>4</div>
+                </div>
+            </div>
+        </div>
+
+        <!--我们店铺的资质-->
+        <div class="title2">
+            <hr class="hrLeft">
+            <p>我们店铺的资质</p>
+            <hr class="hrRight">
+        </div>
+        <div class="swiper-container1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hjSwiper">
+                    <div>
+                        <div>
+                            <div class="title">营业执照</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hjSwiper">
+                    <div>
+                        <div>
+                            <div>
+                                <div class="title">卫生证件</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hjSwiper">
+                    <div>
+                        <div>
+                            <div>
+                                <div class="title">健康证</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hjSwiper">
+                    <div>
+                        <div>
+                            <div>
+                                <div class="title">XX执照</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 固定部分start -->
+        <!--成为我们店铺合伙人的好处-->
+        <div class="title3" style="margin-top: 5%">
+            <hr class="hrLeft">
+            <p>成为我们店铺合伙人的好处</p>
+            <hr class="hrRight">
+        </div>
+        <div class="title2Content">
+            <p>成为我们店铺合伙人，每天只需转发转发，轻轻松松地就可以获得丰厚收入。</p>
+        </div>
+        <div class="title13Content">
+            <div class="title">什么是店铺合伙人?</div>
+            <div>
+                不需要你投资，也不需要你压货、押金;不需要你来店里，上班，也不需要你的管理..只需要你每天在手机的时候，将店铺的活动信息分享给你的 好友或者微信群里即可。
+                你的好友如有购买消费你就可以获得店铺的佣金提成。讲白了就是，我们开店，你负责推广销售，我负责服务、负责售后
+            </div>
+        </div>
+
+        <!--合伙人的收益-->
+        <div class="title1" style="margin-top: 5%">
+            <hr class="hrLeft">
+            <p>合伙人的收益</p>
+            <hr class="hrRight">
+        </div>
+        <div class="title2Content">
+            <p>我们每个商品都是设置了不同的佣金比例，并采用的国家法律允许的三级分销制，当你转发给A，A消费了你就可以获得一级佣金:
+                当A转发给B，B消费了，你就可以获得二级佣金;当B转发给C，C消费了，你就可以获得三级佣金。举个例子:
+            </p>
+        </div>
+        <div class="title13Content" style="margin-top: 2%">
+            <div class="title16ContentCont">
+                比如某 个商品销售价为50元，一级佣金比例8%:二级佣金比例5%;三级佣金比例3%;<br><br>假设你的转发，其中有10个好友购买消费，
+                那么你将获得一级分销佣金:<p>50元X 10人X8% = 40元</p>假设你10好友也跟你一样成为合伙人并转发。同样，经他们的转发，其中每
+                人也都有10个人购买消费，那么总共就是100人购买消费了，你将获得二级分销佣金是:<p>50元X 100人X5%= 250元</p>假设这100人也都
+                跟你一样，经他们的转发，平均每人也有10个人购买消费，那么就是1000人购买消费，你将获得三级分销收入是:<p>50元X 1000人X3%= 1500元</p>那么，你
+                的总收入就是<p>40元+ 250元+ 1500元= 1790元</p>
+            </div>
+        </div>
+        <div class="title13Content" style="margin-top: 2%;color: white;background-color: #d43f3a">
+            <div class="title16ContentCont">
+                仔细看一看，经你的转发才10个人购买消费，最
+                后你确获得了1790元的收入，是不是有点不可思
+                议?<br>
+                其实，这就是倍增裂变的魅力! 1变2; 2变4、4变
+                8，8变16, 16变32.....<br>
+                仔细想想:我们每个人的微信里才10个好友
+                吗?我们每个人的微信才只有10个群吗?<br>
+                如果把这这些好友，这些群都能转化比成我们的资源，那将能为我们带来多大的财富啊!
+            </div>
+        </div>
+
+        <!--有那么人消费吗-->
+        <div class="title1" style="margin-top: 5%">
+            <hr class="hrLeft">
+            <p>有那么人消费吗</p>
+            <hr class="hrRight">
+        </div>
+        <div class="title2Content">
+            <p>
+                现在人人几乎都在用手机购物，淘生、京乐、外卖等等:可以说现在手机为我们带来便利的同时手机购物也深入我们日常生活的方方面面，可以说这是大势所趋。
+            </p>
+        </div>
+        <div class="title13Content">
+            <div class="title17ContentCont">
+                <p>在我们店铺如何购买/消费?</p>
+                <span>
+                    我们每个商品都带有<span style="color: #e7222a;border: .5px solid #e7222a;border-radius: 2px;padding: 1px 2px 0 2px">到店消费</span>或者
+                    <span style="color: #e40082;border: .5px solid #e40082;border-radius: 2px;padding: 1px 2px 0 2px">快递包邮</span>的标志。
+                    所有商品都可以直接微信支付购买。<br>
+                    如果是<span style="color: #e7222a;border: .5px solid #e7222a;border-radius: 2px;padding: 1px 2px 0 2px">到店消费</span>的，购买后，订单就会生成一个验证码，用户凭验证码到店里消费。<br>
+                    如果是<span style="color: #e40082;border: .5px solid #e40082;border-radius: 2px;padding: 1px 2px 0 2px">快递包邮</span>的，购买后，我们店铺就会安排给你快递发货，由快递送货上门。
+                </span>
+                <p>售后问题怎么办?</p>
+                <span>
+                    一切的售后问题都由我们店铺来负责。我们店铺就在你身边，也可以直接到我们店里!我们随时欢迎您的监督。
+                </span>
+                <p>用户不满意，如何退款?</p>
+                <span>
+                    我们实行无理出退款!用户购买后如果觉得不想要了，不满意了，随时都可以退单!退单时，钱即退即到!
+                </span>
+                <p>佣金怎么结算如何提现</p>
+                <span>
+                    用户消费后佣金即时结算，你可以直接用于消费也可以直接提现到你的银行卡或者微信里，提现T+1到账，不收取手续费!
+                </span>
+            </div>
+        </div>
+        <!-- 固定部分end -->
+
+        <!--我们的优势-->
+        <div class="title1" style="margin-top: 5%">
+            <hr class="hrLeft">
+            <p>我们的优势</p>
+            <hr class="hrRight">
+        </div>
+        <div class="youShi">
+            <div class="youShi1 layui-col-xs4">
+                <div class="content">
+                    <img src="image/6.png">
+                    <p>我们开通了<br>企业官网</p>
+                    <div>
+                        <span>企业官网</span>
+                    </div>
+                </div>
+            </div>
+            <div class="youShi1 layui-col-xs4">
+                <div class="content">
+                    <img src="image/7.png">
+                    <p>分店就在你身边<br>随时服务</p>
+                    <div>
+                        <span>附近分店</span>
+                    </div>
+                </div>
+            </div>
+            <div class="youShi1 layui-col-xs4">
+                <div class="content">
+                    <img src="image/8.png">
+                    <p>服务好不好<br>客户说了算</p>
+                    <div>
+                        <span>有口皆碑</span>
+                    </div>
+                </div>
+            </div>
+            <div class="youShi1 layui-col-xs4">
+                <div class="content">
+                    <img src="image/9.png">
+                    <p>提前订<br>省钱省时间</p>
+                    <div>
+                        <span>门店预定</span>
+                    </div>
+                </div>
+            </div>
+            <div class="youShi1 layui-col-xs4">
+                <div class="content">
+                    <img src="image/10.png">
+                    <p>随时服务<br>20分钟送上门</p>
+                    <div>
+                        <span>同城配送</span>
+                    </div>
+                </div>
+            </div>
+            <div class="youShi1 layui-col-xs4">
+                <div class="content">
+                    <img src="image/11.png">
+                    <p>全国销售<br>媲美大平台</p>
+                    <div>
+                        <span>在线商城</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--营销支持-->
+        <div class="title1" style="margin-top: 355px">
+            <hr class="hrLeft">
+            <p>营销支持</p>
+            <hr class="hrRight">
+        </div>
+        <div class="yXContent" id="yXContent">
+            <div class="yXContentDiv  layui-col-xs6">
+                <div class="yXContentTheDiv">
+                    <p class="over1">红包先行</p>
+                    <span class="over1">天天派发红包 满减</span>
+                </div>
+            </div>
+            <div class="yXContentDiv  layui-col-xs6">
+                <div class="yXContentTheDiv">
+                    <p class="over1">现场抽奖</p>
+                    <span class="over1">店内时时抽奖 活跃</span>
+                </div>
+            </div>
+            <div class="yXContentDiv  layui-col-xs6">
+                <div class="yXContentTheDiv">
+                    <p class="over1">现场抽奖</p>
+                    <span class="over1">丰富现金红包 返现</span>
+                </div>
+            </div>
+            <div class="yXContentDiv  layui-col-xs6">
+                <div class="yXContentTheDiv">
+                    <p class="over1">客户实拍</p>
+                    <span class="over1">现场有啥说啥 真实</span>
+                </div>
+            </div>
+            <div class="yXContentDiv layui-col-xs6">
+                <div class="yXContentTheDiv">
+                    <p class="over1">日日聚会</p>
+                    <span class="over1">邀请合伙人到店参观</span>
+                </div>
+            </div>
+            <div class="yXContentDiv layui-col-xs6">
+                <div class="yXContentTheDiv">
+                    <p class="over1">天天培训</p>
+                    <span class="over1">在线免费培训 轻松</span>
+                </div>
+            </div>
+        </div>
+
+        <!--佣金结算保障-->
+        <div class="title1" style="margin-top: 5%">
+            <hr class="hrLeft">
+            <p>佣金结算保障</p>
+            <hr class="hrRight">
+        </div>
+        <div class="title9Content">
+            <p>
+                我们委托深圳市资源通网络科技有限公司为我们提供技术支持和合伙人佣金的结并保障。<br>
+                1、保障合伙人的佣金计算准确<br>
+                2、保障合伙人的佣金安全<br>
+                为此，第三方公司的服务费由我们店铺和合伙人共同承担!
+            </p>
+            <span class="layui-col-xs6" style="color: #046e9c;line-height: 20px" onclick="showMask()">点此合伙协议</span>
+            <span class="layui-col-xs6" style="color: #009b4c;line-height: 20px" onclick="showMask2()">点此费用说明</span>
+            <div>
+                拥有如此保障，你还不赶快加入我们，轻轻松松获取多一份收入!
+            </div>
+        </div>
+    </div>
+    <div class="btnContent">立即申请为合伙人</div>
+</div>
+
+<!--遮罩层-->
+<div id="mask" class="mask"></div>
+
+<script src="dist/js/swiper.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

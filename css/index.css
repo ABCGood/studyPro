@@ -1,0 +1,400 @@
+body{
+    margin: 0 auto;
+    background-color: #eeeeee;
+    line-height: 20px;
+}
+*{
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: black;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/*超出3行显示省略号*/
+.over3{
+    text-decoration: none;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+}
+/*超出2行显示省略号*/
+.over2{
+    text-decoration: none;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+/*超出1行显示省略号*/
+.over1{
+    text-decoration: none;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+}
+
+/* 头部标签 */
+.titles{
+    width: 100%;
+    height: 50px;
+    background-color: #cf292e;
+}
+.titles .leftIcon{
+    width: 15px;
+    float: left;
+    position: absolute;
+    padding-top: 18px;
+    padding-left: 8px;
+}
+.titles div{
+    text-align: center;
+}
+.titles p{
+    font-size: 16px;
+    color: white;
+    /*padding-top: 12px;*/
+    line-height: 50px;
+}
+
+
+.contentTopPic{
+    width: 100%;
+}
+.contentTopPic img{
+    width: 100%;
+    height: 150px;
+}
+
+/*内容*/
+.partnerContent{
+    width: 100%;
+    background-color: #00a2e9;
+}
+.pContent{
+    /*height: 3500px;*/
+    margin: 0 10px;
+    padding: 20px 10px 0 10px;
+    background-color:#ffffff;/* IE6和部分IE7内核的浏览器(如QQ浏览器)下颜色被覆盖 */
+    background-color:rgba(225,225,225,0.5); /* IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂，但解析为透明 */
+}
+.titleContent img{
+    width: 60px;
+}
+.titleContentImg2{
+    float: right;
+}
+.titleContent div{
+    width: 88%;
+    text-align: center;
+    position: absolute;
+}
+.titleContent p{
+    padding: 0 70px;
+    line-height: 20px;
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.titleContentBottom{
+    margin: 10px 0;
+    background-color: #f75e72;
+    color: white;
+    text-align: center;
+    padding: 5px 35px;
+    border-radius: 5px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.title1 hr, .title2 hr{
+    border: .5px solid black;
+    width: 28%;
+    display: -webkit-inline-flex;
+}
+.hrLeft{
+    position: absolute;
+}
+.hrRight{
+    float: right;
+}
+.title1 p, .title2 p, .title3 p{
+    width: 90%;
+    position: absolute;
+    text-align: center;
+    font-size: 14px;
+}
+.title1Content{
+    margin: 14% 0 0 0;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #6a6a6a;
+}
+.title2{
+    padding-top: 10px;
+}
+.title2Content, .title9Content{
+    line-height: 20px;
+    margin: 13% 5px 0 5px;
+}
+.title2Content p, .title9Content p{
+    line-height: 20px;
+    font-size: 12px;
+    color: #757475;
+}
+.item{
+    width: 100%;
+}
+.carContent{
+    margin: 0 3px 35px 3px;
+    background-color: #accec8;
+}
+
+.adressContents,.title13Content,.title16Content{
+    border-radius: 5px;
+    background-color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    color: #6a6a6a;
+    line-height: 20px;
+}
+.adressContents .adress{
+    position: absolute;
+}
+.adressContents p{
+    margin-bottom: 0;
+    margin-left: 55px;
+}
+.adressContents img{
+    width: 15px;
+    float: right;
+    margin-right: 5px;
+}
+.swiper-container1{
+    overflow: hidden;
+    margin-top: 9%;
+    height: 100px;
+    width: 100%;
+}
+.swiper-container1 .swiper-wrapper{
+    margin-right: 5px;
+    width: 34%;
+}
+.hjSwiper div{
+    background-color: white;
+    width: 95%;
+    height: 100%;
+}
+.swiper-slide .title{
+    line-height: 20px;
+    position: absolute;
+    padding-top: 3px;
+    text-align: center;
+    font-size: 12px;
+    width: 95%;
+    height: 20px;
+    background-color:#000000;/* IE6和部分IE7内核的浏览器(如QQ浏览器)下颜色被覆盖 */
+    background-color:rgba(0,0,0,0.2); /* IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂，但解析为透明 */
+    bottom: 0;
+}
+
+.swiper-container{
+    height: 150px;
+    overflow: hidden;
+}
+.swiper-container .swiperWidth{
+    width: 100%;
+}
+.swiperWidth .swiperSlideDiv{
+    width: 100%;
+}
+.carContent img{
+     width: 100%;
+ }
+.carContent p{
+    line-height: 20px;
+    padding: 2px 0 0 5px;
+    margin-bottom: 0;
+}
+
+
+
+
+.title3 hr{
+    border: .5px solid black;
+    width: 15%;
+    display: -webkit-inline-flex;
+}
+.title13Content .title{
+    color: #f08519;
+    font-size: 14px;
+}
+.title16ContentCont p{
+    margin-left: 40px;
+}
+.title16Content{
+    margin-top: 15px;
+    color: white;
+    line-height: 20px;
+}
+.title17ContentCont p{
+    margin-bottom: 0;
+    color: #f08519;
+}
+.title17ContentCont span{
+    margin-bottom: 10px;
+}
+.youShi{
+    margin-top: 40px;
+    width: 100%;
+}
+.youShi1{
+    font-size: 12px;
+    text-align: center;
+    padding-right: 2px;
+    padding-left: 1px;
+    margin-top: 10px;
+}
+.youShi1 .content{
+    background-color: white;
+}
+.youShi1 img{
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 5px 0;
+}
+.youShi1 p{
+    line-height: 20px;
+    margin: 5px 0;
+}
+.youShi1 .content div{
+    height: 20px;
+    padding: 3px;
+    color: #dbba6c;
+    background-color:#dbba6c;
+    background-color:rgba(219,186,108,0.2);
+}
+.youShi1 .content div span{
+    line-height: 20px;
+}
+.yXContent{
+    width: 96%;
+    border: .5px solid white;
+    padding: 15px 5px 15px 5px;
+    font-size: 12px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+}
+.yXContentDiv{
+    order:0;
+    flex-grow:0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    width: 50%;
+    border-right: .5px solid white;
+    padding: 10px 8px 5px 8px;
+}
+.yXContentDiv:nth-child(5),.yXContentDiv:nth-child(6){
+    padding-bottom: 0;
+}
+.yXContentDiv:nth-child(even) {
+    border-right: none;
+}
+.yXContentTheDiv{
+    border-bottom: .5px solid white;
+    width: 92%;
+    padding: 0 5px 5px 5px;
+    text-align: center;
+}
+.yXContentDiv:nth-child(5) .yXContentTheDiv,.yXContentDiv:nth-child(6) .yXContentTheDiv{
+    border-bottom: none;
+}
+.yXContentDiv p{
+    line-height: 20px;
+    margin: 0 13px 4px 13px;
+    border-radius: 5px;
+    color: #dab96b;
+    border: 1px solid #dab96b;
+    background-color: white;
+    padding: 3px;
+}
+.yXContentDiv span{
+    line-height: 20px;
+}
+.title9Content span{
+    text-align: center;
+}
+.title9Content div{
+    line-height: 20px;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #666666;
+    padding-bottom: 20px;
+}
+.partnerContent .btnContent{
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* 遮罩层 */
+.mask {
+    position: absolute;
+    top: 0;
+    filter: alpha(opacity=80);
+    background-color: #666666;
+    z-index: 1002;
+    left: 0;
+    opacity:0.5;
+    -moz-opacity:0.5;
+}
+/* 合伙人协议 */
+.xyContent{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+}
+.xyContent div{
+    border-radius: 10px;
+    overflow:scroll;
+    height:95%;
+    background-color: white;
+    margin: 5%;
+    padding: 10px 5px;
+}
+.xyContent p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+.qdBtn{
+    color: #cf292e;
+    float: right;
+    margin-top: 25px;
+    margin-right: 5px;
+}
